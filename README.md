@@ -1,2 +1,2 @@
 # LoveCalculator
-Using #Html #Css # Js
+Using #Html #Css
