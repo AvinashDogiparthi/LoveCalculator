@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylelove.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="box">
+                <h2>love Calculator</h2>
+                <form action="#" id="myForm">
+                    <div class="form-group">
+                        <input type="text" name="" class="name" placeholder="Your Name" id="name" >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="" class="other" placeholder="Other Name" id="other">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" onclick="cal()">Calculate</button>
+                    </div><br>
+                </form>
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <input type="text" class="gval" id="value">
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cal() {
+
+            var name = document.getElementById('name').value;
+            var other = document.getElementById('other').value;
+            if (name == " " || name.length <= 2 || !isNaN(name) || other == " " || other.length <= 2 || !isNaN(other)) {
+                alert('Invalid input')
+            } else {
+                var data = Math.random() * 100;
+                data = Math.floor(data);
+                document.getElementById('value').value = data + "%";
+                document.documentElement.style.setProperty('--i', data);
+                document.getElementById("myForm").reset();
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
